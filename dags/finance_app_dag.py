@@ -28,7 +28,7 @@ with DAG(
 
     finance_etl = BashOperator(
         task_id="finance_etl",
-        bash_command="sh run_etl.sh",
+        bash_command="sh gs://us-central1-uc4airflowcompo-1f161e83-bucket/Shellscripts/run_etl.sh",
         queue="default",
     )
 
