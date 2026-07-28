@@ -11,7 +11,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id="finance_app_dag",
+    dag_id="finance_app_dag_update",
     description="UC4 migrated DAG for FINANCE_APP",
     default_args=default_args,
     start_date=datetime(2024, 1, 1),
