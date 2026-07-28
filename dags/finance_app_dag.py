@@ -28,7 +28,7 @@ with DAG(
 
     finance_etl = BashOperator(
         task_id="finance_etl",
-        bash_command="sh /home/airflow/gcs/Shellscripts/run_etl.sh",
+        bash_command="""6    gsutil cp gs://us-central1-uc4airflowcompo-1f161e83-bucket/Shellscripts/run_etl.sh /tmp/run_etl.sh &&7    chmod +x /tmp/run_etl.sh &&8    /tmp/run_etl.sh9    """
         queue="default",
     )
 
